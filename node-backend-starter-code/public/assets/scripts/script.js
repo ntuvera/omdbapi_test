@@ -89,6 +89,7 @@ window.onload = function() {
             var tableRow = document.createElement('tr');
             var tableCellCategory = document.createElement('td');
             tableCellCategory.innerHTML = key;
+            tableCellCategory.setAttribute('class', 'smallkey');
             var tableCellInfo = document.createElement('td');
             tableCellInfo.innerHTML = movie[key];
 
@@ -171,11 +172,16 @@ window.onload = function() {
     // render add to favorites button
     var buttonRow = document.createElement('tr');
     var elButton = document.createElement('button');
+    var saveButtonCell = document.createElement('td');
+    var saveCell = document.createElement('td');
+    saveCell.innerHTML = 'Save?';
     elButton.innerHTML = 'Save to Favorites';
     elButton.setAttribute('class', 'add-to-favorites');
     elButton.setAttribute('imdbID', response.imdbID);
 
-    buttonRow.appendChild(elButton);
+    saveButtonCell.appendChild(elButton);
+    buttonRow.appendChild(saveCell);
+    buttonRow.appendChild(saveButtonCell);
     detailTable.appendChild(buttonRow);
 
     // add clic eventlistener
@@ -238,6 +244,7 @@ window.onload = function() {
           var tableRow = document.createElement('tr');
           var tableCellCategory = document.createElement('td');
           tableCellCategory.innerHTML = key;
+          tableCellCategory.setAttribute('class', 'smallkey');
           var tableCellInfo = document.createElement('td');
           tableCellInfo.innerHTML = movie[key];
 
@@ -285,10 +292,9 @@ window.onload = function() {
 
     addFavoriteRequest.open('POST', '/favorites', true);
     addFavoriteRequest.setRequestHeader('Content-type', 'application/json');
-    addFavoriteRequest.send(
-      // encodeURIComponent(JSON.stringify(currentMovieSimplified))
-      parsedCurrentMovie
-    );
+    addFavoriteRequest.send(parsedCurrentMovie);
+
+    renderFavoritesList();
   }
 
   function clearFields(e) {

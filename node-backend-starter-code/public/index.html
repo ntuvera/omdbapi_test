@@ -11,21 +11,25 @@
 
 	<div class="container">
 		<!-- search form -->
-		<div class="row">
+		<div class="row main-form">
 			<div class="col-12">
 				<h2>Movie Search</h2>
-				<h4>powered by OMDBApi.com</h4>
+				<p>powered by OMDBApi.com</p>
 			</div>
-		</div>
-		<div class="row">
-			<form id="movie-search-form">
-				<input class="col" type="text" id="movie-title-input" placeholder="Enter Title or Keyword Here"/>
-				<button class="col-3" type="submit">Search</button>
-				<button class="col-3" type="reset">Clear</button>
-				<button class="col-3" id="favorites-button" type="button">Favorites</button>
-			</form>
-		</div>
 
+			<div class="col-12 search-form">
+				<form id="movie-search-form">
+					<input type="text" id="movie-title-input" placeholder="Enter Title or Keyword Here"/>
+					</br>
+					<div class="buttons">
+						<button type="submit">Search</button>
+						<button type="reset">Clear</button>
+						<button id="favorites-button" type="button">Favorites</button>
+					</div>
+				</form>
+			</div>
+
+		</div>
 		<!-- results display -->
 		<div class="row" id="search-results">
 		</div>

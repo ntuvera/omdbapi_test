@@ -1,0 +1,71 @@
+.main-form {
+  text-align: center;
+  margin: auto;
+  width: 50%;
+  padding-top: 10em;
+}
+
+.search-form {
+  margin: 0;
+  padding-top: 1em;
+}
+
+#movie-search-form {
+  margin: auto;
+  width: 80%;
+  margin-top: 2em;
+}
+.buttons {
+	margin-top:2em;
+	margin-left:auto;
+	margin-right:auto;
+}
+#movie-title-input {
+  width: 90%;
+}
+.poster {
+  height: 300px;
+  width: 200px;
+	margin: auto;
+	display: block;
+}
+.result {
+  margin: 2em;
+  width: 300px;
+	background-color: #eaeaea;
+	padding: 2em;
+	box-shadow: 4px 4px #dddd;
+}
+.result-details {
+  width: 250px;
+  border: 1px solid black;
+  overflow: wrap;
+}
+.add-to-favorites {
+	width:50%;
+	margin: auto;
+	display: block;
+}
+tr, td {
+  border-bottom: 1px solid gray;
+	padding: 4px;
+}
+td.keys {
+	width: 7em;
+}
+td.smallkey {
+	width: 3em;
+}
+
+table {
+	table-layout: fixed;
+	word-break: break-all;
+	border: 2px solid black;
+  border-collapse: collapse;
+	margin-top: 1em;
+	margin-left: auto;
+	margin-right: auto;
+}
+::-webkit-input-placeholder {
+   text-align: center;
+}
