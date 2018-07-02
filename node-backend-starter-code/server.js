@@ -5,7 +5,7 @@ var path = require('path');
 var bodyParser = require('body-parser');
 
 app.use(express.static(path.join(__dirname, '/public')));
-app.use(bodyParser.urlencoded({ extended: false }));
+// app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 // app.use('/', express.static(path.join(__dirname, 'public'));
@@ -16,16 +16,12 @@ app.get('/favorites', function(req, res) {
   res.send(data);
 });
 
-app.get('favorites', function(req, res) {
-  if (!req.body.name || !req.body.oid) {
-    res.send('Error');
-    return;
-  }
-
-  var data = JSON.parse(fs.readFileSync('./data.json'));
+app.post('/favorites', function(req, res) {
+  var data = JSON.parse(fs.readFileSync('data.json'));
+  console.log(data);
+  console.log('wtf');
   data.push(req.body);
-  fs.writeFile('./data.json', JSON.stringify(data));
-  res.setHeader('Content-Type', 'application/json');
+  fs.writeFileSync('./data.json', JSON.stringify(data));
   res.send(data);
 });
 
