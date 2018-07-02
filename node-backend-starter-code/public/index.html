@@ -12,16 +12,26 @@
 	<div class="container">
 		<!-- search form -->
 		<div class="row">
+			<div class="col-12">
+				<h2>Movie Search</h2>
+				<h4>powered by OMDBApi.com</h4>
+			</div>
+		</div>
+		<div class="row">
+			<form id="movie-search-form">
+				<input class="col-5" type="text" id="movie-title-input" placeholder="Enter Title or Keyword Here"/>
+				<button class="col-3" type="submit">Search</button>
+				<button class="col-3" type="reset">Clear</button>
+			</form>
 		</div>
 
 		<!-- results display -->
-		<div class="row">
+		<div class="row" id="search-results">
 		</div>
 
 		<!-- favorites display -->
 		<div class="row">
 		</div>
-
 
 	</div>
 </body>
