@@ -19,3 +19,4 @@ An exercise in AJAX calls to create an SPA application
 -  `node server.js`
 -   navigate browser to `http://localhost:3000`
 
+
